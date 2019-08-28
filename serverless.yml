@@ -1,0 +1,20 @@
+service: callum-test
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: eu-west-1
+  stage: ${opt:stage}
+  deploymentBucket:
+    name: mojo-serverless-deployment
+
+plugins:
+  - serverless-offline
+
+functions:
+  quotes:
+    name: create-quotes
+    handler: src/handlers/quotes.handler
+    events:
+      - http:
+          method: post
+          path: quotes

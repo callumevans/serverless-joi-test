@@ -1,0 +1,20 @@
+{
+  "name": "serverlessoffline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serverless offline",
+    "test": "mocha tests/**.spec.js"
+  },
+  "dependencies": {
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^5.10.1",
+    "mocha": "^6.2.0",
+    "chai": "^4.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
